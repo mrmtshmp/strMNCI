@@ -5,8 +5,9 @@
 #' @param n the number of subjects (Restriction)
 #'
 #' @references Eqs.27 and 28 in "Comparative analysis of two rates", MIETTINEN AND NURMINEN, Stat. Med.(1985)
-#' @export
 #'
+#' @export
+
 resMLE.MN <- function(delta, y, n) {
   N=sum(n)
   C=sum(y)

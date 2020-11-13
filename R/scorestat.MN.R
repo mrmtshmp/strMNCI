@@ -8,7 +8,7 @@
 #' @param bias.correct Bessel's correction for a finite sample.
 #'
 #' @export
-#'
+
 scorestat.MN <- function(
   delta0, dataset, weight = "MN", conflev,
   bias.correct=FALSE

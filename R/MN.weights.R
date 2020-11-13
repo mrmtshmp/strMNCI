@@ -6,7 +6,7 @@
 #' @param  bias.correct Bessel's correction for a finite sample.
 #'
 #' @export
-#'
+
 MN.weights <-
   function(delta, dataset, bias.correct=FALSE) {
     w =  # weight_CMH = n1*n2/(n1+n2) for each strata

@@ -1,5 +1,5 @@
 #' computes the CI for a common risk difference from several stratified 2x2 tables
-
+#'
 #' @importFrom  stats qchisq
 #' @importFrom  stats uniroot
 #' @param  dataset a matrix-class object with each row has to contain y1, n1, y2 and n2, in that order, where y1 is the binomial response out of n1 trials for the treatment group and y2 is the binomial response out of n2 trials for the control group. Each row presents a stratum.
@@ -8,6 +8,8 @@
 #' @param  bias.correct Bessel's correction for a finite sample.
 #'
 #' @references  Miettinen And Nurminen 1985, Stat. in Medicine
+#'
+#' @export
 
 scoreint.strat.MN <-
   function(
