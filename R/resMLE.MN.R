@@ -7,7 +7,7 @@
 #' @references Eqs.27 and 28 in "Comparative analysis of two rates", MIETTINEN AND NURMINEN, Stat. Med.(1985)
 #'
 #' @export
-
+#'
 resMLE.MN <- function(delta, y, n) {
   N=sum(n)
   C=sum(y)
@@ -26,9 +26,9 @@ resMLE.MN <- function(delta, y, n) {
   L0 =
     y[2] * delta * (1-delta)
 
-  #' p2 <- "a", "b", "c" ;
-  #' a unique closed-form solution-following the guidelincs set forth by Bronshtein and Samendyayev
-  #' Bronshtein, J. N. and §emendyayev, K. A. A Guide Book to Mathematics, Verlag Harri Deutch, Frankfurt/Ivlain, 1973, pp. 161-163.
+  # p2 <- "a", "b", "c" ;
+  # a unique closed-form solution-following the guidelincs set forth by Bronshtein and Samendyayev
+  # Bronshtein, J. N. and §emendyayev, K. A. A Guide Book to Mathematics, Verlag Harri Deutch, Frankfurt/Ivlain, 1973, pp. 161-163.
 
   c = # q in eq.28
     L2^3/(3*L3)^3 -

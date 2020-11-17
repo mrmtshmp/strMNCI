@@ -2,14 +2,17 @@
 % Please edit documentation in R/resMLE.MN1.R
 \name{resMLE.MN1}
 \alias{resMLE.MN1}
-\title{computes restricted MLEs for pi1, pi2 under restriction pi1-pi2=delta
-for a given 2x2 table and returns components
-of MN chi-square function}
+\title{computes restricted MLEs for pi1, pi2 under restriction pi1-pi2=delta for a given 2x2 table and returns components of MN chi-square function}
 \usage{
 resMLE.MN1(delta, y, n)
 }
+\arguments{
+\item{delta}{risk difference(Restriction)}
+
+\item{y}{the number of cases (Restriction)}
+
+\item{n}{the number of subjects (Restriction)}
+}
 \description{
-computes restricted MLEs for pi1, pi2 under restriction pi1-pi2=delta
-for a given 2x2 table and returns components
-of MN chi-square function
+computes restricted MLEs for pi1, pi2 under restriction pi1-pi2=delta for a given 2x2 table and returns components of MN chi-square function
 }

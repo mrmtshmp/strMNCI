@@ -18,7 +18,7 @@ MN.weights <-
     repeat {
           w.old = w
           w = w/sum(w)
-          p=t( #' 2. Compute the weighted averages of constrained MLEs, Ri , using (6).
+          p=t( # 2. Compute the weighted averages of constrained MLEs, Ri , using (6).
             apply(
               dataset,1,
               function(ro)
@@ -29,14 +29,14 @@ MN.weights <-
                   )
               )
             )
-    #' contains the restricted MLE's for p1 and p2 (as a vector of length 2 ([1]:p1 [2]:p2))
-    #' for each strata for given delta
+    # contains the restricted MLE's for p1 and p2 (as a vector of length 2 ([1]:p1 [2]:p2))
+    # for each strata for given delta
 
     R = colSums(w*p)  # the weighted averages of constrained MLEs, Ri (i = 1,2)
     RR = R*(1-R)
 
-    #' Update W_j by *Eq.16* in Miettinen, Nurminen 1985
-    #' with or without bias correction for a finite sample.
+    # Update W_j by *Eq.16* in Miettinen, Nurminen 1985
+    # with or without bias correction for a finite sample.
     if (bias.correct)
       w = # updated weights with bias correction (for a finite sample)
       apply(
