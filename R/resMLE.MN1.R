@@ -1,8 +1,10 @@
-#' computes restricted MLEs for pi1, pi2 under restriction pi1-pi2=delta
-#' for a given 2x2 table and returns components
-#' of MN chi-square function
-#' @param 
-#' 
+#' computes restricted MLEs for pi1, pi2 under restriction pi1-pi2=delta for a given 2x2 table and returns components of MN chi-square function
+#'
+#' @param delta risk difference(Restriction)
+#' @param y the number of cases (Restriction)
+#' @param n the number of subjects (Restriction)
+#'
+#' @export
 resMLE.MN1 <- function(delta, y, n) {
   N=sum(n)
   C=sum(y)
