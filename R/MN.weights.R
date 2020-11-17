@@ -1,5 +1,5 @@
 #' computes the MN wights necessary for CI for stratified data
-#'
+#' @import magrittr
 #' @references  Cochran-Mantel-Haenszel Weighted Miettinen & Nurminen Method for Confidence Intervals of the Difference in Binomial Proportions from Stratified 2x2 Samples, Kaifeng Lu (2008)
 #' @param  delta
 #' @param  dataset dataset needs to have centers as rows and number of successes in group1, number of trials in group 1, number of successes in group2, number of trials in group 2 as columns.
@@ -9,6 +9,14 @@
 
 MN.weights <-
   function(delta, dataset, bias.correct=FALSE) {
+    if(
+      apply(
+        dataset, 1,
+        function(v)
+          sum(v[1]>v[2],v[3]>v[4]) > 0
+        ) %>% sum() > 0
+      ) stop("check input dataset; y > n ?")
+
     w =  # weight_CMH = n1*n2/(n1+n2) for each strata
       apply(
         dataset[,c(2,4)],1,
