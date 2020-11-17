@@ -74,6 +74,6 @@ scoreint.strat.MN <-
           dataset, weight=weight, conflev=conflev, bias.correct=bias.correct
         )$root
     return(
-      c(delta.lb,delta.ub)
+      c(point.est, delta.lb,delta.ub)
       )
   }
